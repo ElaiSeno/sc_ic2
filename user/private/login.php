@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log-In</title>
     <link rel="stylesheet" href="../../assets/bootstrap/bootswatch/bootstrap.min.css" />
-    <link rel="website icon" type="png" sizes="32x32" href="../img/logo/PTCI-logo.png">
+    <link rel="website icon" type="png" sizes="32x32" href="../../img/logo/PTCI-logo.png">
 </head>
 
 <body class="bg-light">

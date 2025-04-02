@@ -87,6 +87,7 @@ if (isset($_GET['error']) || isset($_GET['success'])) {
     <link rel="stylesheet" href="../../assets/css/Simple-Slider.css" />
     <link rel="stylesheet" href="../../assets/css/styles.css" />
     <link rel="stylesheet" href="../../assets/css/untitled.css" />
+    <link rel="stylesheet" href="../../img/logo/PTCI-logo.png">
   </head>
 
   <body style="background: #fbf9e4; margin-top: 124px; margin-bottom: 46px">

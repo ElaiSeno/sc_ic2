@@ -25,7 +25,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     <link rel="stylesheet" href="../../assets/css/Simple-Slider-swiper-bundle.min.css">
     <link rel="stylesheet" href="../../assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="../../assets/css/styles.css">
-    <link rel="website icon" type="png" sizes="32x32" href="../img/logo/PTCI-logo.png">
+    <link rel="website icon" type="png" sizes="32x32" href="../../img/logo/PTCI-logo.png">
 </head>
 
 <body style="background: #efefef;border-radius: 22px;">
