@@ -14,7 +14,7 @@
 
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-     <link rel="website icon" type="png" sizes="32x32" href="../img/logo/PTCI-logo.png">
+     <link rel="website icon" type="png" sizes="32x32" href="../../img/logo/PTCI-logo.png">
 </head>
 <body>
     <!-- class for heading -->

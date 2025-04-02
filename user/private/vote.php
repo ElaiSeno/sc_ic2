@@ -87,7 +87,7 @@ if (isset($_GET['error']) || isset($_GET['success'])) {
     <link rel="stylesheet" href="../../assets/css/Simple-Slider.css" />
     <link rel="stylesheet" href="../../assets/css/styles.css" />
     <link rel="stylesheet" href="../../assets/css/untitled.css" />
-   <link rel="website icon" type="png" sizes="32x32" href="../img/logo/PTCI-logo.png">
+    <link rel="stylesheet" href="../../img/logo/PTCI-logo.png">
   </head>
 
   <body style="background: #fbf9e4; margin-top: 124px; margin-bottom: 46px">
@@ -250,7 +250,7 @@ if (isset($_GET['error']) || isset($_GET['success'])) {
           <?php foreach ($candidates as $president) : ?>
           <div
             class="d-flex align-items-lg-center radio-pres_candidate"
-            id="candidate<?= $president['id'] ?>"
+            id="president_<?= $president['id'] ?>"
             style="
               background: #ffffff;
               border-radius: 16px;
@@ -258,7 +258,7 @@ if (isset($_GET['error']) || isset($_GET['success'])) {
               margin-bottom: 34px;
               border: 2px solid rgba(0, 0, 0, 0.15);
             "
-            onclick="selectCandidate('candidate<?= $president['id'] ?>')"
+            onclick="selectCandidate('president_<?= $president['id'] ?>')"
           >
             <!-- Uploads root -->
             <img
@@ -338,7 +338,7 @@ if (isset($_GET['error']) || isset($_GET['success'])) {
           <?php foreach ($viceCandidates as $vicePresident) : ?>
           <div
             class="d-flex align-items-lg-center radio-pres_candidate"
-            id="candidate<?= $vicePresident['id'] ?>"
+            id="vpresident_<?= $vicePresident['id'] ?>"
             style="
               background: #ffffff;
               border-radius: 10px;
@@ -346,7 +346,7 @@ if (isset($_GET['error']) || isset($_GET['success'])) {
               border: 2px solid rgba(0, 0, 0, 0.15);
               padding: 21px;
             "
-            onclick="selectCandidate('candidate<?= $vicePresident['id'] ?>')"
+            onclick="selectCandidate('vpresident_<?= $vicePresident['id'] ?>')"
           >
             <img
               class="candidate-pic"
@@ -418,7 +418,7 @@ mysqli_close($conn);
             <p style="margin-bottom: 2px; margin-left: 27px">
               •&nbsp; Select your preferred candidates for each position and
               click 'Submit Vote' to finalize your choices.
-            </p>
+            </p
             <p style="margin-left: 27px; margin-top: 7px">
               •&nbsp; Ensure that you have reviewed your selections carefully
               before submitting, as changes cannot be made after submission.
@@ -600,7 +600,7 @@ mysqli_close($conn);
     <script>
       function selectCandidate(candidateId) {
         const clickedElement = document.getElementById(candidateId);
-        const isPresident = clickedElement.closest("#pres-wrapper") !== null;
+        const isPresident = candidateId.startsWith('president_');
 
         const candidates = isPresident
             ? document.querySelectorAll("#pres-wrapper .radio-pres_candidate")
@@ -614,8 +614,8 @@ mysqli_close($conn);
             ? "4px solid #00FFD1"
             : "4px solid #05B0D6";
 
-        // pdate the hidden inputs
-        const candidateValue = candidateId.replace('candidate', '');
+        // Update the hidden inputs - extract just the ID number
+        const candidateValue = candidateId.split('_')[1];
         if (isPresident) {
             document.getElementById('president_input').value = candidateValue;
         } else {

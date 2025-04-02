@@ -18,20 +18,27 @@
             <div class="logo">Admin</div>
             <ul class="menu list-unstyled">
                 <div class="menu-label">Information</div>
-                <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="candidates.php">Candidates</a></li>
-                <div class="menu-label">Account</div>
-                <li><a href="createcandidates.php">Create Student Council</a></li>
-                <li><a href="createstelcom.php">Create Stelcom</a></li>
-                <li><a href="createadmin.php">Create Admin</a></li>
-                <div class="menu-label">Configuration</div>
-                <li><a href="#">Start/End</a></li>
+                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="candidates.php">Candidates</a></li>            
+                    <div class="menu-label">Account</div>
+                    <li><a href="createcandidates.php">Create Student Council</a></li>
+                    <li><a href="createstelcom.php">Create Stelcom</a></li>
+                    <li><a href="createadmin.php">Create Admin</a></li>
+
+
+                    <div class="menu-label">Configuration</div>
+                    <li><a href="#">Start/End</a></li>
             </ul>
 
             <div class="footer">
                 <a href="/logout" class="text-decoration-none">Logout</a>
             </div>
         </div>
+        <div class="hamburger" onclick="toggleSidebar()">
+            &#9776;
+        </div>  
+
+        <!-- Hamburger Icon -->
         <div class="hamburger" onclick="toggleSidebar()">
             &#9776;
         </div>

@@ -13,14 +13,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $lastName = mysqli_real_escape_string($conn, $_POST['LastName']);
     $department = mysqli_real_escape_string($conn, $_POST['Department']); 
     
-    // Insert the data into the database
-    $insertQuery = "INSERT INTO `account_validation` (`student_id`, `account_name`, `last_name`, `department`, `created_at`) 
-                    VALUES ('$schoolID', '$accountName', '$lastName', '$department', NOW())";
+    // check in account_validation
+    $checkQuery1 = "SELECT student_id FROM account_validation WHERE student_id = '$schoolID'";
+    $result1 = mysqli_query($conn, $checkQuery1);
     
-    if (mysqli_query($conn, $insertQuery)) {
-        header("Location: ../user/private/registration.php?success=true");
+    // check in valid_account table
+    $checkQuery2 = "SELECT student_id FROM valid_account WHERE student_id = '$schoolID'";
+    $result2 = mysqli_query($conn, $checkQuery2);
+    
+    if (mysqli_num_rows($result1) > 0 || mysqli_num_rows($result2) > 0) {
+        header("Location: ../user/private/registration.php?error=exists");
     } else {
-        echo "Error: " . mysqli_error($conn);
+        // query
+        $insertQuery = "INSERT INTO `account_validation` (`student_id`, `account_name`, `last_name`, `department`, `created_at`) 
+                        VALUES ('$schoolID', '$accountName', '$lastName', '$department', NOW())";
+        
+        if (mysqli_query($conn, $insertQuery)) {
+            header("Location: ../user/private/registration.php?success=true");
+        } else {
+            echo "Error: " . mysqli_error($conn);
+        }
     }
 }
 
