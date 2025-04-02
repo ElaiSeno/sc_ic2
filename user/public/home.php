@@ -38,19 +38,15 @@
 <div class="container">
     <aside class="carousel">
         <div class="carousel__wrapper">
-            <div class="item" id="slide-0"><img src="../../assets/image-home/p1.jpg" alt=""
+            <div class="item" id="slide-0"><img src="../../assets/image-home/lennith.jpg" alt=""
                     width="418" height="418" /></div>
-            <div class="item" id="slide-1"><img src="../../assets/image-home/p2.jpg" alt=""
+            <div class="item" id="slide-1"><img src="../../assets/image-home/gen.jpg" alt=""
                     width="418" height="418" /></div>
-            <div class="item" id="slide-2"><img src="../../assets/image-home/p3.jpg" alt=""
+            <div class="item" id="slide-2"><img src="../../assets/image-home/jamie.jpg" alt=""
                     width="418" height="418" /></div>
-            <div class="item" id="slide-3"><img src="../../assets/image-home/p1.jpg" alt=""
+            <div class="item" id="slide-3"><img src="../../assets/image-home/lovelie.jpg" alt=""
                     width="418" height="418" /></div>
-            <div class="item" id="slide-4"><img src="../../assets/image-home/p2.jpg" alt=""
-                    width="418" height="418" /></div>
-            <div class="item" id="slide-5"><img src="../../assets/image-home/p3.jpg" alt=""
-                    width="418" height="418" /></div>
-            <div class="item" id="slide-6"><img src="../../assets/image-home/p1.jpg" alt=""
+            <div class="item" id="slide-4"><img src="../../assets/image-home/velly.jpg" alt=""
                     width="418" height="418" /></div>
         </div>
     </aside>
